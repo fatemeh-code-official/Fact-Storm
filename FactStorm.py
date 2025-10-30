@@ -27,7 +27,7 @@ Questions_list = {
 def run_quiz(questions):
     score = 0
     for question, answer in questions.items():
-        print(question)
+        print("\U0001F9E0 "+question)
         user_answer = input("Answer: ").strip().lower()
         if user_answer == answer:
             print("Correct \u2705")
