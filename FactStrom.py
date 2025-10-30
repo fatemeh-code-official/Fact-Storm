@@ -43,5 +43,14 @@ def calculate_score(score):
         print(f"Try again later.\nYour score is {score} of 5")
 
 
-#Selecting unique questions
-selected_questions = dict(random.sample(list(Questions_list.items()), 5))
+print("Hello, Welcome to Fact Strom!\nNow you can exercise your brain...\n\n")
+
+while True:
+    #Selecting unique questions
+    selected_questions = dict(random.sample(list(Questions_list.items()), 5))
+    calculate_score(run_quiz(selected_questions))
+
+    #Game finishing
+    leave_game=input("Do you want to finish the game ? (y/n) : ").strip().lower()
+    if leave_game=='y':
+        break
