@@ -30,20 +30,23 @@ def run_quiz(questions):
         print(question)
         user_answer = input("Answer: ").strip().lower()
         if user_answer == answer:
+            print("Correct \u2705")
             score += 1
+        else:
+            print("Wrong \u274C")
     return score
 
 #A function for calculating user's score
 def calculate_score(score):
     if score==5:
-        print(f"You won!\nYour score is {score} of 5")
+        print(f"You won! \U0001F3C6\nYour score is {score} of 5")
     elif 3<= score <=4:
-        print(f"Not bad.\nYour score is {score} of 5")
+        print(f"Not bad \U0001F609.\nYour score is {score} of 5")
     else:
-        print(f"Try again later.\nYour score is {score} of 5")
+        print(f"Try again later \U0001F605.\nYour score is {score} of 5")
 
 
-print("Hello, Welcome to Fact Strom!\nNow you can exercise your brain...\n\n")
+print("\U0001F4A1 Hello, Welcome to Fact Strom!\nNow you can exercise your brain...\n\n")
 
 while True:
     #Selecting unique questions
@@ -53,4 +56,5 @@ while True:
     #Game finishing
     leave_game=input("Do you want to finish the game ? (y/n) : ").strip().lower()
     if leave_game=='y':
+        print("Please come back soon \U0001F60A")
         break
