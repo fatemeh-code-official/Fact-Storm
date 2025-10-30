@@ -1,5 +1,6 @@
-#Questions and their answers
-Questions_list={
+import random
+
+Questions_list = {
     "What is the largest planet in our solar system?": "jupiter",
     "Who painted the Mona Lisa?": "leonardo da vinci",
     "What is the capital city of Australia?": "canberra",
@@ -21,3 +22,16 @@ Questions_list={
     "Which bird is known for its colorful tail feathers?": "peacock",
     "Which language has the most native speakers worldwide?": "mandarin"
 }
+
+#A function for quiz running
+def run_quiz(questions):
+    score = 0
+    for question, answer in questions.items():
+        print(question)
+        user_answer = input("Answer: ").strip().lower()
+        if user_answer == answer:
+            score += 1
+    return score
+
+#Selecting unique questions
+selected_questions = dict(random.sample(list(Questions_list.items()), 5))
