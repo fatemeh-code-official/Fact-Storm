@@ -33,5 +33,15 @@ def run_quiz(questions):
             score += 1
     return score
 
+#A function for calculating user's score
+def calculate_score(score):
+    if score==5:
+        print(f"You won!\nYour score is {score} of 5")
+    elif 3<= score <=4:
+        print(f"Not bad.\nYour score is {score} of 5")
+    else:
+        print(f"Try again later.\nYour score is {score} of 5")
+
+
 #Selecting unique questions
 selected_questions = dict(random.sample(list(Questions_list.items()), 5))
